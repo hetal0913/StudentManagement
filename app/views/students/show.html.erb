@@ -1,19 +1,26 @@
-<p id="notice"><%= notice %></p>
+<div class="col-lg">
+  <div class="card rounded-0 shadow">
+   <div class="card-body">
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @student.first_name %>
-</p>
+    <p>
+      <strong>First name:</strong>
+      <%= @student.first_name %>
+    </p>
+    
+    <p>
+      <strong>Last name:</strong>
+      <%= @student.last_name %>
+    </p>
+    
+    <p>
+      <strong>Email:</strong>
+      <%= @student.email %>
+    </p>
+    
+    <%= link_to 'Edit', edit_student_path(@student), class: "btn btn-primary"%>
+    <%= link_to 'Back', students_path, class: "btn btn-primary" %>
+   </div>
+  </div>
+</div>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @student.last_name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @student.email %>
-</p>
-
-<%= link_to 'Edit', edit_student_path(@student) %> |
-<%= link_to 'Back', students_path %>

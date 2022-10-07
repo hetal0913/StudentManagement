@@ -1,4 +1,5 @@
 class StudentsController < ApplicationController
+  layout 'admin'
   before_action :set_student, only: %i[ show edit update destroy ]
 
   # GET /students or /students.json
@@ -55,6 +56,9 @@ class StudentsController < ApplicationController
       format.html { redirect_to students_url, notice: "Student was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  def home
   end
 
   private
