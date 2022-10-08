@@ -1,0 +1,12 @@
+<div class="col-9">
+    <h1>Editing Admin Project</h1>
+
+    <%= render 'form', admin_project: @admin_project %>
+    
+    <div style="margin-top: 10px;">
+        <%= link_to 'Show', admin_project_path(@admin_project), class: "btn btn-primary", style: "display: inline" %> |
+        <%= link_to 'Back', admin_projects_path, class: "btn btn-primary" %>
+    </div>
+    
+</div>
+

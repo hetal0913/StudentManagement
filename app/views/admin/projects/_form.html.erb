@@ -1,0 +1,27 @@
+<%= form_with(model: [:admin, admin_project]) do |form| %>
+  <% if admin_project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(admin_project.errors.count, "error") %> prohibited this admin_project from being saved:</h2>
+
+      <ul>
+        <% admin_project.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control form-control-sm" %>
+  </div>
+
+  <div class="field form-group">
+    <%= form.label :description %>
+    <%= form.text_area :description, class: "form-control form-control-sm" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Submit', class: "btn btn-primary"%>
+  </div>
+<% end %>

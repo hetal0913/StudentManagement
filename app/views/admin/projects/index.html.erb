@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+<div class="col-9">
+  <div>
+    <h1 class="pt-10" style="display: inline;">Projects</h1>  
+    <p class="float-right"><%= link_to 'New Project', new_admin_project_path, class: "btn btn-primary" %></p>
+  </div>
+  
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @admin_projects.each do |admin_project| %>
+        <tr>
+          <td><%= admin_project.name %></td>
+          <td><%= admin_project.description %></td>
+          <td><%= link_to 'Show', admin_project_path(admin_project) %></td>
+          <td><%= link_to 'Edit', edit_admin_project_path(admin_project) %></td>
+          <td><%= link_to 'Destroy', admin_project_path(admin_project), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  
+  <br>
+</div>
+
+
+

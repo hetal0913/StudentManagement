@@ -14,14 +14,15 @@ ActiveStorage.start()
 
 import $ from 'jquery';
 global.$ = jQuery;
+import "@fortawesome/fontawesome-free/css/all"
 import "bootstrap";
 
 import 'css/admin.scss';
 
-import './plugins/chart-area-demo'
-import './plugins/chart-bar-demo'
-import './plugins/chart-pie-demo'
-import './plugins/Chart.min'
+// import './plugins/chart-area-demo'
+// import './plugins/chart-bar-demo'
+// import './plugins/chart-pie-demo'
+// import './plugins/Chart.min'
 import './plugins/jquery.easing.min'
 import './plugins/sb-admin-2.min'
 

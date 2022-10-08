@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  resources :projects
-  resources :students
 
   root to: 'students#home'
 
   namespace :admin do
+    resources :students
+    resources :projects
     get 'dashboard' => 'dashboard#index'
   end
 
