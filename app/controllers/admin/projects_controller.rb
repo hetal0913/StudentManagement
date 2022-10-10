@@ -3,7 +3,7 @@ class Admin::ProjectsController < AdminController
 
   # GET /admin/projects or /admin/projects.json
   def index
-    @admin_projects = Project.all
+    @pagy, @admin_projects = pagy(Project.all)
   end
 
   # GET /admin/projects/1 or /admin/projects/1.json
