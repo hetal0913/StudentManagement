@@ -4,7 +4,9 @@ class Admin::StudentsController < AdminController
 
   # GET /students or /students.json
   def index
-    @students = Student.all.page(params[:page])
+    @q = Student.ransack(params[:q])
+    @students = @q.result(distinct: true).page(params[:page])
+    # @students = Student.all.page(params[:page])
   end
 
   # GET /students/1 or /students/1.json

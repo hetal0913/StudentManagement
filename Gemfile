@@ -55,3 +55,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # pagination
 gem 'kaminari'
 gem 'pagy'
+
+#searching
+gem 'ransack'
